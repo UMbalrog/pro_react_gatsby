@@ -6,7 +6,7 @@ import '../styles/pageindex.less'
 export default function Home() {
   const [ show, setShow ] = useState(0);
   let [ list ] = useState([]);
-  if(localStorage){
+  try {
     let locmsg = localStorage.getItem('x_bookmark');
     if(locmsg){
       list = JSON.parse(locmsg);
@@ -20,7 +20,7 @@ export default function Home() {
         }
       ];
     }
-  }else{
+  } catch (error) {
     list = [
       {
         type: 2,
@@ -29,8 +29,8 @@ export default function Home() {
         href: 'javascript'
       }
     ];
-  }
-
+  };
+  
   function showEvent (param) {  
     setShow(param)
   }
