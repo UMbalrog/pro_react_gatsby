@@ -5,10 +5,21 @@ import '../styles/pageindex.less'
 
 export default function Home() {
   const [ show, setShow ] = useState(0);
-  let locmsg = localStorage.getItem('x_bookmark');
   let [ list ] = useState([]);
-  if(locmsg){
-    list = JSON.parse(locmsg);
+  if(localStorage){
+    let locmsg = localStorage.getItem('x_bookmark');
+    if(locmsg){
+      list = JSON.parse(locmsg);
+    }else{
+      list = [
+        {
+          type: 2,
+          name: '添加快捷方式',
+          icon: '',
+          href: 'javascript'
+        }
+      ];
+    }
   }else{
     list = [
       {
