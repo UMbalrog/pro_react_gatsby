@@ -46,18 +46,21 @@ export default class Layer extends React.Component {
         <div className="content">
           <div className="title">添加快捷方式</div>
           <div className="bodys">
-            <label>
-              名称
+            <div className="name">名称</div>
+            <label className="label">
               <input type="text" value={this.state.namew} onChange={this.setNamew.bind(this)} />        
             </label>
-            <label>
-              网址
+            <div className="name">网址</div>
+            <label className="label">
               <input type="text" value={this.state.value} onChange={this.setValue.bind(this)} />        
             </label>
           </div>
           <div className="button-container">
             <button className="cancel-button" onClick={() => this.props.showEvent(0)}>取消</button>
-            <button className="action-button" onClick={() => this.handleChange()}>完成</button>
+            {(this.state.namew && this.state.value) ? 
+              <button className="cancel-button done-button" onClick={() => this.handleChange()}>完成</button>
+              : <button className="cancel-button action-button">完成</button>
+            }
             </div>
         </div>
       </div>

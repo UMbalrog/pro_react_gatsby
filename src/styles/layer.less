@@ -22,6 +22,76 @@
     padding-bottom: 20px;
   }
   .bodys{
-    
+    .name{
+      margin-bottom: 5px;
+    }
+    .label{
+      width: 274px;
+      height: 27px;
+      box-sizing: border-box;
+      background-color: rgb(241 243 244);
+      padding: 6px;
+    }
+    input{
+      -webkit-appearance: none;
+      background-color: transparent;
+      border: none;
+      box-sizing: border-box;
+      caret-color: rgb(26 115 232);
+      color: rgb(32 33 36);
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+      min-height: 27px;
+      outline: none;
+      padding-bottom: 6px;
+      padding-inline-end: 8px;
+      padding-inline-start: 8px;
+      padding-top: 6px;
+      text-align: inherit;
+      text-overflow: ellipsis;
+      width: 100%;
+    }
+  }
+  .button-container{
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 16px;
+    padding-inline-end: 16px;
+    padding-inline-start: 16px;
+    padding-top: 44px;
+    .cancel-button{
+      --paper-ripple-opacity: 1;
+      -webkit-tap-highlight-color: transparent;
+      align-items: center;
+      border: 1px solid rgb(218 220 224);
+      border-radius: 4px;
+      box-sizing: border-box;
+      color: rgb(26 115 232);
+      cursor: pointer;
+      display: inline-flex;
+      flex-shrink: 0;
+      font-weight: 500;
+      height: 32px;
+      justify-content: center;
+      min-width: 5.14em;
+      outline-width: 0;
+      padding: 8px 16px;
+      position: relative;
+      user-select: none;
+    }
+    .action-button{
+      background-color: rgb(241 243 244);
+      border-color: transparent;
+      color: rgb(128 134 139);
+      margin-left: 10px;
+    }
+    .done-button{
+      background-color: rgb(26 115 232);
+      border-color: transparent;
+      color: white;
+      margin-left: 10px;
+    }
   }
 }
