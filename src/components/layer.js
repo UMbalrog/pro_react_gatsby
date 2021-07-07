@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import '../styles/layer.less'
 
 export default class Layer extends React.Component {
